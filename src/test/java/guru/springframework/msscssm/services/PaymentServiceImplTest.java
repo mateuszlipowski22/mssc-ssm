@@ -40,7 +40,7 @@ class PaymentServiceImplTest {
         StateMachine<PaymentState, PaymentEvent> sm = paymentService.preAuth(savedPayment.getId());
         Payment preAuthedPayment = paymentRepository.findById(savedPayment.getId()).get();
 
-        System.out.println("Should be PRE_AUTH");
+        System.out.println("Should be PRE_AUTH or PRE_AUTH");
         System.out.println(sm.getState().getId());
 
         System.out.println(preAuthedPayment);
